@@ -1,8 +1,13 @@
 ---
 title: Penetration Testing Vault — Master Index
-tags: [eJPT, Index, Hub, MasterIndex, Pentesting]
+tags:
+  - eJPT
+  - Index
+  - Hub
+  - MasterIndex
+  - Pentesting
 created: 2026-04-06
-updated: 2026-04-14
+updated: 2026-06-08
 source: Notion / Transcription / Knowledge
 ---
 
@@ -147,20 +152,39 @@ Reporting
 ---
 
 ### Post-Exploitation
-> Privilege escalation, persistence, and lateral movement
+> Privilege escalation, persistence, lateral movement, and clearing tracks
 
 | Note | Summary |
 |---|---|
+| [[Introduction-to-Post-Exploitation]] | Post-exploitation lifecycle, ROE, objectives, key variables |
+| [[Post-Exploitation-Methodology]] | 8-stage methodology, tools per phase, workflow overview |
+| [[Post-Exploitation-Cheatsheet]] | All commands organized by phase — quick reference |
+| [[eJPT-Post-Exploitation-Checklist]] | Exam-day checklist for Windows and Linux tracks |
+| [[Windows-Local-Enumeration]] | System info, users, groups, network, processes, JAWS automation |
+| [[Linux-Local-Enumeration]] | System info, users, groups, network, cron, LinEnum automation |
+| [[File-Transfers]] | Python web server, certutil (Windows), wget (Linux), tmux |
+| [[Upgrading-Shells]] | Non-interactive shell, Python pty, env fix, shell→Meterpreter |
+| [[Windows-Privilege-Escalation]] | PrivescCheck, WinLogon credentials, psexec.py, web_delivery |
+| [[Linux-Privilege-Escalation-SUDO]] | sudo -l, NOPASSWD, GTFOBins, pager escapes |
+| [[Linux-Privilege-Escalation-Weak-Permissions]] | World-writable files, /etc/shadow exploit, openssl passwd |
+| [[Windows-Persistence]] | Service-based persistence, RDP backdoor (getgui), registry |
+| [[Linux-Persistence-SSH-Keys]] | SSH key theft, key planting, authorized_keys |
+| [[Linux-Persistence-Cron-Jobs]] | Cron reverse shell, bash /dev/tcp, netcat listener |
+| [[Windows-Password-Hashes]] | NTLM theory, SAM, hashdump, Kiwi/Mimikatz, John/Hashcat |
+| [[Dumping-Linux-Password-Hashes]] | /etc/shadow, linux/gather/hashdump, sha512crypt cracking |
+| [[Pivoting]] | autoroute, port forwarding, bind_tcp payloads, ping verification |
+| [[Clearing-Tracks-Windows]] | /temp artifacts, MSF cleanup scripts, clearev (red team only) |
+| [[Clearing-Tracks-Linux]] | /tmp, bash history, history -c, selective deletion |
 | [[Msfvenom-Payloads]] | Generating, encoding (Shikata Ga Nai), injecting payloads into PE files |
-| [[Meterpreter-Fundamentals]] | Session management, filesystem, shell, process migration, upgrading shells |
+| [[Meterpreter-Fundamentals]] | Session management, filesystem, shell, process migration |
 | [[Resource-Scripts]] | Automating MSF with .rc files — handler, port scan, db_status |
-| [[Windows-Password-Hashes]] | SAM, NTLM/LM theory, Kiwi (Meterpreter), Mimikatz exe, Linux hashdump |
+| [[Windows-Post-Exploitation-Modules]] | win_privs, enum_logged_on, checkvm, enum_applications, enum_patches |
 | [[Alternate-Data-Streams]] | NTFS ADS — hiding executables in resource streams |
 | [[Keylogging-and-Covering-Tracks]] | keyscan_start/dump, clearev — erase Windows event logs |
 | [[Enabling-RDP]] | Enable RDP via MSF module, xfreerdp access from Kali |
-| [[Windows-Persistence]] | Persistence service module — survive reboots + credential changes |
-| [[Windows-Post-Exploitation-Modules]] | win_privs, enum_logged_on, checkvm, enum_applications, enum_patches |
-| [[Pivoting]] | autoroute, port forwarding, bind_tcp payloads for internal network pivoting |
+| [[Searching-For-Passwords-In-Windows-Configuration-Files]] | Unattended install files, registry passwords |
+
+→ [[Post-Exploitation/00-INDEX]]
 
 ---
 
